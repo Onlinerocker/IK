@@ -1,7 +1,20 @@
-# AnimationToolkit
+# Inverse Kinematics Demos
+**Name** \
+Gabriel Caldwell
 
-I completed assignment 1's four required questions. I found the trigonometry to be
-challenging as I haven't been exposed to it since freshman year.
-The assignment took ~3 hours for questions 1-4.
+**Structure** \
+The code I developed can be found in \
+*assignments/a9-ik/ALooker.cpp* \
+*libsrc/animation/AIKController-basecode.cpp*.
 
-For my bonus, I created a small program that allows the user to draw randomly sized circles that change colors.
+**Description** \
+For this Computer Animation lab I was required to implement an analytical method of IK on a two-link. Additionally, I implemented the looker.
+
+**Originally Created** \
+December 9, 2019
+
+**Controls:** \
+Left-button drag with the mouse to rotate
+Right-button drag with the mouse to pan
+Middle-button drag with the mouse to zoom
+'f' button will focus the view on the character 
