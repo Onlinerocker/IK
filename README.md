@@ -21,7 +21,7 @@ Middle-button drag with the mouse to zoom \
 'f' button will focus the view on the character \
 
 **Windows Build Instructions** \
-Requirements: CMake, Visual Studio \
+Requirements: CMake, Visual Studio
 * Create new directory named 'build'
 * Navigate to this new directory and run 'cmake ..'
 * This should build the required files
