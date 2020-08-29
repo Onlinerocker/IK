@@ -4,6 +4,7 @@ Gabriel Caldwell
 
 **Structure** \
 The assignments in my computer animation class required us to implement key features in an animation library. Said library can be found in 'libsrc/animation'. Addtionally, we would implement assignement specific code in the 'assignments' folder. \
+\
 The code I developed for IK demos can be found in \
 *assignments/a9-ik/ALooker.cpp* \
 *libsrc/animation/AIKController-basecode.cpp*.
