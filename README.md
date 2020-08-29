@@ -14,7 +14,7 @@ For this Computer Animation lab I was required to implement an analytical method
 December 9, 2019
 
 **Controls:** \
-Left-button drag with the mouse to rotate
-Right-button drag with the mouse to pan
-Middle-button drag with the mouse to zoom
+Left-button drag with the mouse to rotate \
+Right-button drag with the mouse to pan \
+Middle-button drag with the mouse to zoom \
 'f' button will focus the view on the character 
