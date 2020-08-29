@@ -3,12 +3,13 @@
 Gabriel Caldwell
 
 **Structure** \
-The code I developed can be found in \
+The assignments in my computer animation class required us to implement key features in an animation library. Said library can be found in 'libsrc/animation'. Addtionally, we would implement assignement specific code in the 'assignments' folder. \
+The code I developed for IK demos can be found in \
 *assignments/a9-ik/ALooker.cpp* \
 *libsrc/animation/AIKController-basecode.cpp*.
 
 **Description** \
-For this Computer Animation lab I was required to implement an analytical method of IK on a two-link. Additionally, I implemented the looker.
+For this Computer Animation lab I was required to implement an analytical method of IK on a two-link. Additionally, I implemented which enables a skeleton to "look at" a moving target point.
 
 **Originally Created** \
 December 9, 2019
