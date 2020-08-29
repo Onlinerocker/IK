@@ -17,4 +17,5 @@ December 9, 2019
 Left-button drag with the mouse to rotate \
 Right-button drag with the mouse to pan \
 Middle-button drag with the mouse to zoom \
+'Ctrl' + 'Left-click' to move the goal point \
 'f' button will focus the view on the character 
