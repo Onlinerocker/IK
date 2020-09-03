@@ -3,7 +3,7 @@
 Gabriel Caldwell
 
 **Structure** \
-My Computer Animation course required us to develop key animation library features, and implement those features in applications. Application specific code can be found in *assignments* and library code can be found in *libsrc/animation*.
+During my Computer Animation course I developed key animation library features, and implemented those features into various applications. Application specific code can be found in *assignments* and library code can be found in *libsrc/animation*.
 
 Project dependencies are located in *3rdparty*. You shouldn't need to touch these.
 
@@ -12,7 +12,7 @@ The code I developed for IK demos can be found in \
 *libsrc/animation/AIKController-basecode.cpp*.
 
 **Description** \
-For this Computer Animation lab I was required to implement an analytical method of IK on a two-link. Additionally, I implemented which enables a skeleton to "look at" a moving target point.
+I implemented an analytical method of IK on a two-link. Additionally, I developed a function which enables a skeleton to "look at" a moving target point.
 
 **Originally Created** \
 December 9, 2019
