@@ -24,7 +24,6 @@ protected:
     virtual void initializeGui();
     virtual void draw();
     virtual void drawOverlay();
-    virtual void loadIKJoints();
     virtual void update();
     virtual void reset();
     virtual void mouseMove(int pX, int pY);

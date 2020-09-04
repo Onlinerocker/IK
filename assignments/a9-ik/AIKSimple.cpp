@@ -30,29 +30,6 @@ void AIKSimple::setupCharacter()
     std::cout << "new pt: " << newPt.translation << std::endl;
     std::cout << "length: " << newPt.translation.length() << std::endl;
 
-    /*double theta1Z = asin(-sin(rad));
-    std::cout << "theta 1z " << theta1Z << " " << theta1Z * ARad2Deg << std::endl;
-
-    ATransform newPtAlongX;
-    newPtAlongX = ATransform(AQuaternion(AVector3(0,0,1), theta1Z), root.translation) * p2 * p3 * ATransform();
-    std::cout << "new point is " << newPtAlongX << std::endl;
-
-    double beta = atan2(pd.z(), pd.x());
-    std::cout << "beta is " << beta << std::endl;
-    double gamma = asin(pd.y() / 5.0);
-    std::cout << "gamma is " << gamma << std::endl;
-
-    ATransform finalPt;
-    ATransform finalPart1 = p2 * p3 * ATransform();
-
-    AMatrix3 mat;
-    mat.fromEulerAnglesYZX(AVector3(0, beta, gamma));
-    AQuaternion quatPart2 = AQuaternion(mat) * AQuaternion(AVector3(0,0,1), theta1Z);
-
-    ATransform finalPart2 = ATransform(quatPart2, root.translation);
-    finalPt = finalPart2 * finalPart1;
-    std::cout << "Final pt (polar)" << finalPt << std::endl;*/
-
     AVector3 dir = newPt.translation - root.translation;
     AVector3 error = pd - newPt.translation;
     std::cout << "error: " << error << std::endl;
@@ -85,8 +62,6 @@ void AIKSimple::setupCharacter()
 
    mGoalPosition = wrist->getGlobalTranslation();
    mSelectedJoint = 2;
-
-   loadIKJoints();
 }
 
 AIKSimple::~AIKSimple()
@@ -101,8 +76,6 @@ void AIKSimple::initializeGui()
     TwAddVarCB(mPoseEditBar, "X", TW_TYPE_DOUBLE, onSetGoalXCb, onGetGoalXCb, this, " group='Goal position'");
     TwAddVarCB(mPoseEditBar, "Y", TW_TYPE_DOUBLE, onSetGoalYCb, onGetGoalYCb, this, " group='Goal position'");
     TwAddVarCB(mPoseEditBar, "Z", TW_TYPE_DOUBLE, onSetGoalZCb, onGetGoalZCb, this, " group = 'Goal position'");
-
-   loadIKJoints();
 }
 
 void AIKSimple::reset()
@@ -180,38 +153,6 @@ void TW_CALL AIKSimple::ResetIKCb(void* clientData)
     AIKSimple* viewer = (AIKSimple*)clientData;
     viewer->reset();
 }
-
-void AIKSimple::loadIKJoints()
-{
-    for (int i = 0; i < (int) mEffectorData.size(); i++)
-    {
-        TwRemoveVar(mPoseEditBar, mEffectorData[i]->name.c_str());
-        delete mEffectorData[i];
-    }
-    mEffectorData.clear();
-
-    char buff[256];
-    for (int i = 0; i < mActor.getNumJoints(); i++)
-    {
-        AJoint* joint = mActor.getByID(i);
-        if (joint->getParent() &&
-            joint->getParent()->getName().find("Hand") != std::string::npos)
-        {
-            continue;
-        }
-        if (joint->getName().find("Site") != std::string::npos) continue;
-
-        EffectorData* ld = new EffectorData;
-        ld->viewer = this;
-        ld->jointid = i;
-        ld->name = joint->getName();
-        mEffectorData.push_back(ld);
-
-        sprintf(buff, " label='%s' group='Select Joint'", joint->getName().c_str());
-        TwAddButton(mPoseEditBar, mEffectorData.back()->name.c_str(), SelectIKCb, ld, buff);
-    }
-}
-
 
 void AIKSimple::mouseMove(int pX, int pY)
 {
