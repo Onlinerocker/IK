@@ -9,7 +9,19 @@ Project dependencies are located in *3rdparty*. You shouldn't need to touch thes
 
 The code I developed for IK demos can be found in \
 *assignments/a9-ik/ALooker.cpp* \
-*libsrc/animation/AIKController-basecode.cpp*.
+*libsrc/animation/AIKController-basecode.cpp* \
+*libsrc/animation/AMatrix3-basecode.cpp* \
+
+
+The Functions I developed:
+**ALooker**
+*lookAtTarget \\
+
+**AIKController-basecode**
+*solveIKTwoLink \\
+
+**AMatrix3-basecode**
+*fromEulerAnglesYZX \\
 
 **Description** \
 I implemented an analytical method of IK on a two-link. Additionally, I developed a function which enables a skeleton to "look at" a moving target point.
