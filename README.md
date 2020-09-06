@@ -15,22 +15,22 @@ The code I developed for IK demos can be found in \
 *libsrc/animation/AQuaternion-basecode.cpp* \
 
 
-The Functions I developed:
-**ALooker**
-*lookAtTarget* \
+**The Functions I developed:** \
+*ALooker*
+* lookAtTarget
 
-**AIKController-basecode**
-*solveIKTwoLink* \
+*AIKController-basecode*
+* solveIKTwoLink*
 
-**AJoint-basecode**
-*fk* (Called by *skeleton.fk*) \
+*AJoint-basecode*
+* f (Called by *skeleton.fk*) 
 
-**AMatrix3-basecode**
-*fromEulerAnglesYZX* \
+*AMatrix3-basecode*
+* fromEulerAnglesYZX
 
-**AQuaternion-basecode**
-*fromMatrix* (used in AQuaternion constructor) \
-*fromAxisAngle* (used in AQuaternion constructor) \
+*AQuaternion-basecode*
+* fromMatrix (used in *AQuaternion* constructor)
+* fromAxisAngle (used in *AQuaternion* constructor)
 
 **Description** \
 I implemented an analytical method of IK on a two-link. Additionally, I developed a function which enables a skeleton to "look at" a moving target point.
