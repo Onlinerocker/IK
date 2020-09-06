@@ -16,6 +16,7 @@ The code I developed for IK demos can be found in \
 
 
 **The Functions I developed:** \
+\
 *ALooker*
 * lookAtTarget
 
@@ -23,7 +24,7 @@ The code I developed for IK demos can be found in \
 * solveIKTwoLink*
 
 *AJoint-basecode*
-* f (Called by *skeleton.fk*) 
+* fk (Called by *skeleton.fk*) 
 
 *AMatrix3-basecode*
 * fromEulerAnglesYZX
